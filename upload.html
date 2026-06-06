@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Produk - ReviewLokal</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="navbarApp"></div>
+
+  <main class="container py-5">
+    <div class="card border-0 shadow-soft rounded-4">
+      <div class="card-body p-4 p-md-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mb-4">
+          <div>
+            <h2 id="formTitle" class="fw-bold mb-1">Upload Produk Baru</h2>
+            <p class="text-muted mb-0">Tambahkan produk dan pilih kategori dari data kategori.</p>
+          </div>
+
+          <a href="index.html" class="btn btn-light rounded-pill align-self-start">
+            <i class="fas fa-arrow-left me-1"></i> Kembali
+          </a>
+        </div>
+
+        <div id="formAlert"></div>
+
+        <form id="productForm" class="row g-4">
+          <input type="hidden" id="produkEditId" />
+
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Nama Produk</label>
+            <input
+              type="text"
+              id="namaProduk"
+              class="form-control form-modern"
+              placeholder="Contoh: iPhone 16 Pro"
+              required
+            />
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Kategori</label>
+            <select
+              id="kategoriProduk"
+              class="form-select form-modern"
+              required
+            >
+              <option value="">Memuat kategori...</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Brand</label>
+            <input
+              type="text"
+              id="brandProduk"
+              class="form-control form-modern"
+              placeholder="Contoh: Apple"
+              required
+            />
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Harga</label>
+            <input
+              type="number"
+              id="hargaProduk"
+              class="form-control form-modern"
+              placeholder="Contoh: 19999000"
+              min="0"
+              required
+            />
+          </div>
+
+          <div class="col-12">
+            <label class="form-label fw-semibold">URL Gambar Produk</label>
+            <input
+              type="url"
+              id="gambarProduk"
+              class="form-control form-modern"
+              placeholder="https://..."
+              required
+            />
+          </div>
+
+          <div class="col-12">
+            <label class="form-label fw-semibold">Deskripsi</label>
+            <textarea
+              id="deskripsiProduk"
+              class="form-control form-modern"
+              rows="4"
+              placeholder="Tulis deskripsi singkat produk..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Status</label>
+            <select id="statusProduk" class="form-select form-modern">
+              <option value="Aktif">Aktif</option>
+              <option value="Nonaktif">Nonaktif</option>
+            </select>
+          </div>
+
+          <div class="col-12 d-flex flex-column flex-md-row gap-2">
+            <button id="btnProduk" type="submit" class="btn btn-success btn-modern px-5">
+              <i class="fas fa-save me-1"></i> Simpan Produk
+            </button>
+
+            <a href="index.html" class="btn btn-outline-secondary btn-modern px-5">
+              Batal
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/helpers.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="assets/js/upload-page.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

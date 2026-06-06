@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beri Review - ReviewLokal</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="navbarApp"></div>
+
+    <main class="container py-5 review-page-wrapper">
+      <div class="card border-0 shadow-soft rounded-4">
+        <div class="card-body p-4 p-md-5">
+          <h2 class="fw-bold mb-4">Beri Rating & Review</h2>
+
+          <div id="selectedProductInfo"></div>
+
+          <form id="reviewForm" class="row g-4">
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Pilih Produk</label>
+              <select id="produkId" class="form-select form-modern" required>
+                <option value="">Memuat produk...</option>
+              </select>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Nama Reviewer</label>
+              <input
+                type="text"
+                id="namaReviewer"
+                class="form-control form-modern"
+                required
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Email</label>
+              <input
+                type="email"
+                id="emailReviewer"
+                class="form-control form-modern"
+                required
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Rating</label>
+              <div
+                id="ratingPicker"
+                class="rating-picker"
+                role="radiogroup"
+                aria-label="Pilih rating"
+              >
+                <button
+                  type="button"
+                  class="rating-star"
+                  data-rating="1"
+                  aria-label="1 bintang"
+                >
+                  <i class="fas fa-star"></i>
+                </button>
+                <button
+                  type="button"
+                  class="rating-star"
+                  data-rating="2"
+                  aria-label="2 bintang"
+                >
+                  <i class="fas fa-star"></i>
+                </button>
+                <button
+                  type="button"
+                  class="rating-star"
+                  data-rating="3"
+                  aria-label="3 bintang"
+                >
+                  <i class="fas fa-star"></i>
+                </button>
+                <button
+                  type="button"
+                  class="rating-star"
+                  data-rating="4"
+                  aria-label="4 bintang"
+                >
+                  <i class="fas fa-star"></i>
+                </button>
+                <button
+                  type="button"
+                  class="rating-star"
+                  data-rating="5"
+                  aria-label="5 bintang"
+                >
+                  <i class="fas fa-star"></i>
+                </button>
+                <span id="ratingText" class="rating-text ms-2"
+                  >Pilih rating</span
+                >
+              </div>
+              <input type="hidden" id="rating" required />
+            </div>
+
+            <div class="col-12">
+              <label class="form-label fw-semibold">Judul Review</label>
+              <input
+                type="text"
+                id="judulReview"
+                class="form-control form-modern"
+                required
+              />
+            </div>
+
+            <div class="col-12">
+              <label class="form-label fw-semibold">Isi Review</label>
+              <textarea
+                id="isiReview"
+                class="form-control form-modern"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <div class="col-12">
+              <button
+                id="btnReview"
+                type="submit"
+                class="btn btn-primary btn-modern px-5"
+              >
+                Kirim Review
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/helpers.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/review-page.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
