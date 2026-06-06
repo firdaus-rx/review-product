@@ -13,7 +13,6 @@ review-barang
 │     ├─ navbar.js
 │     ├─ products-page.js
 │     ├─ review-page.js
-│     ├─ reviewers-page.js
 │     └─ upload-page.js
 ├─ index.html
 ├─ review.html
